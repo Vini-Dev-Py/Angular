@@ -19,7 +19,10 @@ import { CategoriesCrudComponent } from './views/categories-crud/categories-crud
 import { BrandsCrudComponent } from './views/brands-crud/brands-crud.component';
 import { CustomersCrudComponent } from './views/customers-crud/customers-crud.component';
 import { RequestsCrudComponent } from './views/requests-crud/requests-crud.component';
-import { SettingsComponent } from './views/settings/settings.component'
+import { SettingsComponent } from './views/settings/settings.component';
+import { RedDirective } from './directives/red.directive';
+import { ForDirective } from './directives/for.directive';
+import { ProductCreateComponent } from './components/product-create/product-create.component'
 
 @NgModule({
   declarations: [
@@ -34,6 +37,9 @@ import { SettingsComponent } from './views/settings/settings.component'
     CustomersCrudComponent,
     RequestsCrudComponent,
     SettingsComponent,
+    RedDirective,
+    ForDirective,
+    ProductCreateComponent,
   ],
   imports: [
     BrowserModule,
