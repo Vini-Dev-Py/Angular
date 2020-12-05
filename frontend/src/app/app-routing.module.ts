@@ -8,7 +8,7 @@ import { HomeComponent } from "./views/home/home.component";
 import { ProductCrudComponent } from "./views/product-crud/product-crud.component";
 import { RequestsCrudComponent } from './views/requests-crud/requests-crud.component';
 import { SettingsComponent } from './views/settings/settings.component';
-import { ProductCreateComponent } from './components/product-create/product-create.component';
+import { ProductCreateComponent } from './components/product/product-create/product-create.component';
 
 const routes: Routes = [
   {
