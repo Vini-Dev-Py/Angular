@@ -1,19 +1,19 @@
 {
-    "products": [
-        {
-            "id": 1,
-            "name": "Processador I5 9400K",
-            "price": 1500
-        },
-        {
-            "id": 2,
-            "name": "Placa de video GTX 1650 4GB",
-            "price": 1500
-        },
-        {
-            "id": 3,
-            "name": "Gabinete Gamer Tt",
-            "price": 580
-        }
-    ]
+  "products": [
+    {
+      "id": 1,
+      "name": "Processador I5 9400K",
+      "price": 1500
+    },
+    {
+      "id": 2,
+      "name": "Placa de video GTX 1650 4GB",
+      "price": 1500
+    },
+    {
+      "id": 3,
+      "name": "Gabinete Gamer Tt",
+      "price": 580
+    }
+  ]
 }
