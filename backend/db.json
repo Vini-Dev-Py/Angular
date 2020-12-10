@@ -14,6 +14,16 @@
       "id": 3,
       "name": "Gabinete Gamer Tt",
       "price": 580
+    },
+    {
+      "name": "Bala",
+      "price": "1",
+      "id": 4
+    },
+    {
+      "name": "Cadeira",
+      "price": "1000",
+      "id": 5
     }
   ]
 }
