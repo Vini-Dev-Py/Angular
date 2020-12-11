@@ -1,3 +1,4 @@
+import { CustomersCreateComponent } from './components/customers/customers-create/customers-create.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { BrandsCrudComponent } from './views/brands-crud/brands-crud.component';
@@ -34,6 +35,10 @@ const routes: Routes = [
   {
     path: "customers",
     component: CustomersCrudComponent
+  },
+  {
+    path: "customers/create",
+    component: CustomersCreateComponent
   },
   {
     path: "requests",

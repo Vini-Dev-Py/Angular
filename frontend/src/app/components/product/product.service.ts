@@ -9,12 +9,12 @@ import { Observable } from 'rxjs';
 })
 export class ProductService {
 
-  baseUrl = "http://localhost:3001/products"
+  ProductsUrl = "http://localhost:3001/products"
 
   constructor(private snackBar: MatSnackBar,
     private http: HttpClient) {  }
 
-  showMessage(msg: string): void {
+  showMessageProducts(msg: string): void {
     this.snackBar.open(msg, 'X', {
       duration: 5000,
       horizontalPosition: "right",
@@ -22,15 +22,15 @@ export class ProductService {
     })
   }
 
-  create(product: Product): Observable<Product> {
+  createProducts(product: Product): Observable<Product> {
     return this.http.post<Product>(
-      this.baseUrl,
+      this.ProductsUrl,
       product
     )
   }
 
-  read(): Observable<Product[]> {
-    return this.http.get<Product[]>(this.baseUrl)
+  readProducts(): Observable<Product[]> {
+    return this.http.get<Product[]>(this.ProductsUrl)
   }
 
 }

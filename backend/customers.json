@@ -1,0 +1,12 @@
+{
+    "customers": [
+        {
+            "id": 1000,
+            "name": "Vini",
+            "CPF": 49626678828,
+            "Email": "vinigbatista21@gmail.com",
+            "Phone": 19999754103,
+            "End": "Rua Sergipe 472 Sumaré-SP"
+        }
+    ]
+}

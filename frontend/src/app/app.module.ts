@@ -30,7 +30,9 @@ import { HttpClientModule } from '@angular/common/http'
 import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field'
 import { MatInputModule } from '@angular/material/input';
-import { ProductReadComponent } from './components/product/product-read/product-read.component'
+import { ProductReadComponent } from './components/product/product-read/product-read.component';
+import { CustomersCreateComponent } from './components/customers/customers-create/customers-create.component';
+import { CustomersReadComponent } from './components/customers/customers-read/customers-read.component'
 
 @NgModule({
   declarations: [
@@ -49,6 +51,8 @@ import { ProductReadComponent } from './components/product/product-read/product-
     ForDirective,
     ProductCreateComponent,
     ProductReadComponent,
+    CustomersCreateComponent,
+    CustomersReadComponent,
   ],
   imports: [
     BrowserModule,

@@ -24,6 +24,16 @@
       "name": "Cadeira",
       "price": "1000",
       "id": 5
+    },
+    {
+      "name": "Mouse Gamer",
+      "price": "120",
+      "id": 6
+    },
+    {
+      "name": "Cadeira Gamer",
+      "price": "3000",
+      "id": 7
     }
   ]
 }
