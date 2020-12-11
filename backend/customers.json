@@ -1,12 +1,20 @@
 {
-    "customers": [
-        {
-            "id": 1000,
-            "name": "Vini",
-            "CPF": 49626678828,
-            "Email": "vinigbatista21@gmail.com",
-            "Phone": 19999754103,
-            "End": "Rua Sergipe 472 Sumaré-SP"
-        }
-    ]
+  "customers": [
+    {
+      "id": 1000,
+      "name": "Vini",
+      "CPF": 49626678828,
+      "Email": "vinigbatista21@gmail.com",
+      "Phone": 19999754103,
+      "End": "Rua Sergipe 472 Sumaré-SP"
+    },
+    {
+      "name": "Vinicius",
+      "CPF": "49626678828",
+      "Email": "vinigbatista21@gmail.com",
+      "Phone": "14981553932",
+      "End": "Rua Sergipe",
+      "id": 1001
+    }
+  ]
 }
