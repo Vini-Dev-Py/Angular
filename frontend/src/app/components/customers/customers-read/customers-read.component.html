@@ -1,14 +1,7 @@
 <ul>
-    <li *ngFor="let customers of customersRead">
-      <h2>
-          {{ customers.name }} <i class="material-icons">play_for_work</i> <br>
-          <span class="infos">
-            {{ customers.id }} <br>
-            {{ customers.CPF }} <br>
-            {{ customers.Email }} <br>
-            {{ customers.Phone }} <br>
-            {{ customers.End }} <br>
-          </span>
-      </h2>
-    </li>
+  <li *ngFor="let customers of customersRead">
+    <h2>
+        {{ customers.id }} {{ customers.name }} {{ customers.Email }}
+    </h2>
+  </li>
 </ul>

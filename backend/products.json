@@ -34,6 +34,11 @@
       "name": "Cadeira Gamer",
       "price": "3000",
       "id": 7
+    },
+    {
+      "name": "R6",
+      "price": "100",
+      "id": 8
     }
   ]
 }
