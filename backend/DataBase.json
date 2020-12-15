@@ -1,0 +1,88 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Processador I5 9400K",
+      "price": 1500
+    },
+    {
+      "id": 2,
+      "name": "Placa de video GTX 1650 4GB",
+      "price": 1500
+    },
+    {
+      "id": 3,
+      "name": "Gabinete Gamer Tt",
+      "price": 580
+    },
+    {
+      "name": "Bala",
+      "price": "1",
+      "id": 4
+    },
+    {
+      "name": "Cadeira",
+      "price": "1000",
+      "id": 5
+    },
+    {
+      "name": "Mouse Gamer",
+      "price": "120",
+      "id": 6
+    },
+    {
+      "name": "Cadeira Gamer",
+      "price": "3000",
+      "id": 7
+    },
+    {
+      "name": "R6",
+      "price": "100",
+      "id": 8
+    },
+    {
+      "name": "Cadeira",
+      "price": "3000",
+      "id": 9
+    },
+    {
+      "name": "Carro Ford",
+      "price": "55000",
+      "id": 10
+    }
+  ],
+  "customers": [
+    {
+      "id": 1000,
+      "name": "Vini",
+      "CPF": 49626678828,
+      "Email": "vinigbatista21@gmail.com",
+      "Phone": 19999754103,
+      "End": "Rua Sergipe 472 Sumaré-SP"
+    },
+    {
+      "name": "Vinicius",
+      "CPF": "49626678828",
+      "Email": "vinigbatista21@gmail.com",
+      "Phone": "14981553932",
+      "End": "Rua Sergipe",
+      "id": 1001
+    },
+    {
+      "name": "WASHINGTON LUIS BATISTA",
+      "CPF": "",
+      "Email": "vinigbatista21@gmail.com",
+      "Phone": "14981553932",
+      "End": "Rua Sergipe",
+      "id": 1002
+    },
+    {
+      "name": "Sofia Nicoli Batista",
+      "CPF": "49626678828",
+      "Email": "vinigbatista21@gmail.com",
+      "Phone": "14981553932",
+      "End": "Rua Sergipe",
+      "id": 1003
+    }
+  ]
+}

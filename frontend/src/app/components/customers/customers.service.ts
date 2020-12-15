@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class CustomersService {
 
-  CustomersUrl = "http://localhost:3002/customers"
+  CustomersUrl = "http://localhost:3001/customers"
 
   constructor(private snackBar: MatSnackBar,
     private http: HttpClient) { }
@@ -32,5 +32,4 @@ export class CustomersService {
   readCustomers(): Observable<Customers[]> {
     return this.http.get<Customers[]>(this.CustomersUrl)
   }
-
 }

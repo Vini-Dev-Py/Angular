@@ -10,14 +10,19 @@ import { Component, OnInit } from '@angular/core';
 export class CustomersReadComponent implements OnInit {
 
   customersRead: Customers[]
+  displayedColumns = ['id', 'name', 'Email', 'button']
 
   constructor(private customersService: CustomersService) { }
 
   ngOnInit(): void {
     this.customersService.readCustomers().subscribe(customers => {
       this.customersRead = customers
-      console.log(customers)
+      // console.log(customers)
     })
+  }
+
+  Teste(id, name, CPF, Email, Phone, End): void {
+    console.log(id, name, CPF, Email, Phone, End)
   }
 
 }

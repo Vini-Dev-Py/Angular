@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "json-server --watch products.json --port 3001",
-    "startCustomers": "json-server --watch customers.json --port 3002"
+    "start": "json-server --watch DataBase.json --port 3001"
   },
   "keywords": [],
   "author": "",
