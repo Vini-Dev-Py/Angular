@@ -40,6 +40,7 @@ import { MatSortModule } from '@angular/material/sort';
 
 import localePt from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
+import { CustomersFullInfosComponent } from './components/customers-full-infos/customers-full-infos.component';
 
 registerLocaleData(localePt);
 
@@ -63,6 +64,7 @@ registerLocaleData(localePt);
     CustomersCreateComponent,
     CustomersReadComponent,
     ProductRead2Component,
+    CustomersFullInfosComponent,
   ],
   imports: [
     BrowserModule,

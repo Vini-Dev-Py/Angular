@@ -1,3 +1,5 @@
+import { Customers } from './components/customers/customers.model';
+import { CustomersFullInfosComponent } from './components/customers-full-infos/customers-full-infos.component';
 import { CustomersCreateComponent } from './components/customers/customers-create/customers-create.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -39,6 +41,10 @@ const routes: Routes = [
   {
     path: "customers/create",
     component: CustomersCreateComponent
+  },
+  {
+    path: "customers/infosfull",
+    component: CustomersFullInfosComponent
   },
   {
     path: "requests",
