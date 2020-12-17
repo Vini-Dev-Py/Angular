@@ -2,6 +2,7 @@ import { Customers } from './customers.model';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -12,7 +13,8 @@ export class CustomersService {
   CustomersUrl = "http://localhost:3001/customers"
 
   constructor(private snackBar: MatSnackBar,
-    private http: HttpClient) { }
+    private http: HttpClient,
+    private router: Router) { }
 
   showMessageCustomers(msg: string): void {
     this.snackBar.open(msg, 'X', {
@@ -31,5 +33,12 @@ export class CustomersService {
 
   readCustomers(): Observable<Customers[]> {
     return this.http.get<Customers[]>(this.CustomersUrl)
+  }
+  
+  readCustomersById(id: string): Observable<Customers> {
+
+    const url = `${this.CustomersUrl}/${id}`
+
+    return this.http.get<Customers>(url)
   }
 }

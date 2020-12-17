@@ -43,7 +43,7 @@ const routes: Routes = [
     component: CustomersCreateComponent
   },
   {
-    path: "customers/infosfull",
+    path: "customers/infosfull/:id",
     component: CustomersFullInfosComponent
   },
   {

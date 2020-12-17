@@ -23,6 +23,12 @@
       "price": "120",
       "quantity": "5",
       "id": 4
+    },
+    {
+      "name": "Cadeira Gamer",
+      "price": "3000",
+      "quantity": "30",
+      "id": 5
     }
   ],
   "customers": [

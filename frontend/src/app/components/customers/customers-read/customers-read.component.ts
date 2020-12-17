@@ -1,5 +1,6 @@
 import { Customers } from './../customers.model';
 import { CustomersService } from './../customers.service';
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { state } from '@angular/animations';
@@ -15,7 +16,8 @@ export class CustomersReadComponent implements OnInit {
   displayedColumns = ['id', 'name', 'Email', 'button']
 
   constructor(private customersService: CustomersService,
-    private router: Router) { }
+    private router: Router,
+    private http: HttpClient) { }
 
   ngOnInit(): void {
     this.customersService.readCustomers().subscribe(customers => {
@@ -24,22 +26,9 @@ export class CustomersReadComponent implements OnInit {
     })
   }
 
-  infosFull(id, name, CPF, Email, Phone, End): void {
+  infosFull(id: string): void {
 
-    let InfosObj = new Object();
-
-    InfosObj = {
-      id: id,
-      name: name,
-      CPF: CPF,
-      Email: Email,
-      Phone: Phone,
-      End: End
-    }
-
-    this.router.navigateByUrl('/customers/infosfull', {
-      state: InfosObj
-    })
+    this.router.navigate([`/customers/infosfull/${id}`])
 
     // console.log(id, name, CPF, Email, Phone, End)
   }

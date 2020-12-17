@@ -1,3 +1,6 @@
+import { ActivatedRoute, Route, Router } from '@angular/router';
+import { CustomersService } from './../customers/customers.service';
+import { Customers } from './../customers/customers.model';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +10,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CustomersFullInfosComponent implements OnInit {
 
-  constructor() { }
+  customers: Customers
+
+  constructor(private customersService: CustomersService, 
+    private router: Router,
+    private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    const id = this.route.snapshot.paramMap.get('id')
+
+    this.customersService.readCustomersById(id).subscribe(customers => {
+      this.customers = customers
+      console.log(customers)
+    });
   }
 
 }
