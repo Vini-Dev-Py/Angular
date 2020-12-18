@@ -1,9 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 
+div.fundoInfos {
+    width: 70%;
+    border: 3px solid #000;
+}
+
+span {
+    padding: 16px;
+    margin-right: 0px;
+}
+
+h1 span {
+    height: 35px;
+}
+
+div.infos span {
+    height: 35px;
+}
+
 h1 {
     display: flex;
+    border-bottom: 3px solid #000;
+    margin-bottom: 0;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: 300;
+}
+
+.infos {
+    display: flex;
+    margin-right: auto;
+    width: 66%;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 25px;
 }
