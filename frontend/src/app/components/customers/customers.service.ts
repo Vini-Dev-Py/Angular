@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
 })
 export class CustomersService {
 
-  CustomersUrl = "http://localhost:3001/customers"
+  CustomersUrl = "http://127.0.0.1:8000/customers/customers/"
 
   constructor(private snackBar: MatSnackBar,
     private http: HttpClient,
@@ -37,7 +37,7 @@ export class CustomersService {
   
   readCustomersById(id: string): Observable<Customers> {
 
-    const url = `${this.CustomersUrl}/${id}`
+    const url = `${this.CustomersUrl} ${id}/`
 
     return this.http.get<Customers>(url)
   }

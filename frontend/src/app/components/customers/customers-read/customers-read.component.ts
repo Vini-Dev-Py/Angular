@@ -22,13 +22,13 @@ export class CustomersReadComponent implements OnInit {
   ngOnInit(): void {
     this.customersService.readCustomers().subscribe(customers => {
       this.customersRead = customers
-      // console.log(customers)
+      console.log(customers)
     })
   }
 
   infosFull(id: string): void {
 
-    this.router.navigate([`/customers/infosfull/${id}`])
+    this.router.navigate([`/customers/infosfull/${id}/`])
 
     // console.log(id, name, CPF, Email, Phone, End)
   }
