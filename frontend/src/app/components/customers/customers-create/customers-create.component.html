@@ -1,0 +1,35 @@
+<mat-card>
+    <mat-card-title>
+        Novo Produto
+    </mat-card-title>
+    <form action="">
+        <mat-form-field>
+            <input matInput placeholder="Nome" 
+                [(ngModel)]="customers.nameCustomers" name="name">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="CPF" 
+                [(ngModel)]="customers.CPF" name="CPF">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Email" 
+                [(ngModel)]="customers.Email" name="Email">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Telefone" 
+                [(ngModel)]="customers.Phone" name="Phone">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Endereço" 
+                [(ngModel)]="customers.End" name="Endereço">
+        </mat-form-field>
+    </form>
+</mat-card>
+
+<button mat-raised-button (click)="createCustomer()" color="primary">
+    Salvar
+</button>
+
+<button mat-raised-button (click)="cancelCustomer()">
+    Cancelar
+</button>

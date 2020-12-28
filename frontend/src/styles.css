@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 300;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.red {
+    color: #e35e6b;
+}
+
+.v-middle {
+    vertical-align: middle;
+}
