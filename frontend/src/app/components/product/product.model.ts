@@ -1,6 +1,7 @@
 export interface Product {
     id?: number
-    name: string
+    nameProducts: string
     price: number
     quantity: number
+    image?: string
 }

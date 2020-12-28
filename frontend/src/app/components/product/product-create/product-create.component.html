@@ -5,7 +5,7 @@
     <form action="">
         <mat-form-field>
             <input matInput placeholder="Nome" 
-                [(ngModel)]="product.name" name="name">
+                [(ngModel)]="product.nameProducts" name="name">
         </mat-form-field>
         <mat-form-field>
             <input matInput placeholder="Preço (R$)" 
@@ -15,6 +15,7 @@
             <input matInput placeholder="Quantidade De Produtos"
                 [(ngModel)]="product.quantity" name="quantity">
         </mat-form-field>
+            <input type="file" id="inputFiles" (change)="OnChange($event)" placeholder="Imagem Do Produto" name="imagem">
     </form>
 </mat-card>
 
@@ -25,3 +26,4 @@
 <button mat-raised-button (click)="cancel()">
     Cancelar
 </button>
+

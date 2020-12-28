@@ -1,3 +1,19 @@
 table {
     width: 100%;
 }
+
+.id, .SKU {
+    padding-right: 25px;
+}
+
+.name {
+    width: 200px;
+}
+
+img.product {
+    height: 8%;
+}
+
+.imgProduct {
+    width: 13%;
+}

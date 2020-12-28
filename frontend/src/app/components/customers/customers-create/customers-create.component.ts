@@ -11,7 +11,7 @@ import { Route, Router } from '@angular/router';
 export class CustomersCreateComponent implements OnInit {
 
   customers: Customers = {
-    name: '',
+    nameCustomers: '',
     CPF: null,
     Email: '',
     Phone: null,

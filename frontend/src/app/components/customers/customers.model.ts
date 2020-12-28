@@ -1,6 +1,6 @@
 export interface Customers {
     id?: number
-    name: string
+    nameCustomers: string
     CPF: number
     Email: string
     Phone: number

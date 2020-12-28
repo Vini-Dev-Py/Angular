@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class ProductService {
 
-  ProductsUrl = "http://localhost:3001/products"
+  ProductsUrl = "http://127.0.0.1:8000/products/product-itens/"
 
   constructor(private snackBar: MatSnackBar,
     private http: HttpClient) {  }
