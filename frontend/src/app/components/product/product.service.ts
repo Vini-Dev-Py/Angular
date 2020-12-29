@@ -33,4 +33,10 @@ export class ProductService {
     return this.http.get<Product[]>(this.ProductsUrl)
   }
 
+  DJANGO_SERVER: string = "http://127.0.0.1:8000";
+
+  public upload(formData) {
+    return this.http.post<any>(`${this.DJANGO_SERVER}/upload/`, formData);
+  }
+
 }

@@ -15,15 +15,21 @@
             <input matInput placeholder="Quantidade De Produtos"
                 [(ngModel)]="product.quantity" name="quantity">
         </mat-form-field>
-            <input type="file" id="inputFiles" (change)="OnChange($event)" placeholder="Imagem Do Produto" name="imagem">
+        <mat-form-field>
+            <input matInput placeholder="SKU"
+                [(ngModel)]="product.SKU" name="SKU">
+        </mat-form-field>
+    </form>
+    <form  [formGroup]="form" (ngSubmit)="onSubmit()">
+        <input type="file" id="inputFiles" (change)="onChange($event)" placeholder="Imagem Do Produto" formcontrolname="imagem">
+        
+        <button mat-raised-button type="submit" color="primary">
+            Salvar
+        </button>
+
+        <button mat-raised-button (click)="cancel()">
+            Cancelar
+        </button>
     </form>
 </mat-card>
-
-<button mat-raised-button (click)="createProduct()" color="primary">
-    Salvar
-</button>
-
-<button mat-raised-button (click)="cancel()">
-    Cancelar
-</button>
 

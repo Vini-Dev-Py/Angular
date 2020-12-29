@@ -4,7 +4,7 @@
     <ng-container matColumnDef="image">
       <th mat-header-cell *matHeaderCellDef>Product</th>
       <td class="imgProduct" mat-cell *matCellDef="let row">
-        <img class="product" src="{{row.image}}" alt="">
+        <img class="product" src="{{row.imageProducts}}" alt="">
       </td>
     </ng-container>
 
@@ -22,7 +22,7 @@
 
     <ng-container matColumnDef="SKU">
       <th mat-header-cell *matHeaderCellDef>SKU</th>
-      <td class="SKU" mat-cell *matCellDef="let row">{{row.id}}</td>
+      <td class="SKU" mat-cell *matCellDef="let row">{{row.SKU}}</td>
     </ng-container>
 
     <!-- Price Column -->

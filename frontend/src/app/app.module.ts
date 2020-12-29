@@ -17,7 +17,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { HttpClientModule } from '@angular/common/http'
 
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field'
 import { MatInputModule } from '@angular/material/input';
 import { MatTableModule } from '@angular/material/table';
@@ -45,7 +45,10 @@ import { ProductRead2Component } from './components/product/product-read2/produc
 
 import { CustomersFullInfosComponent } from './components/customers-full-infos/customers-full-infos.component';
 
+// import { HttpService } from '../shared/http.service';
+
 registerLocaleData(localePt);
+import { from } from 'rxjs';
 
 @NgModule({
   declarations: [
@@ -85,7 +88,9 @@ registerLocaleData(localePt);
     MatPaginatorModule,
     MatSortModule,
     HttpClientModule,
+    BrowserModule, 
     FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [{
     provide: LOCALE_ID,
