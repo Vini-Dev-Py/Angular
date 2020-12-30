@@ -1,0 +1,32 @@
+.home .title {
+    font-size: 3rem;
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+.home .subtitle {
+    font-size: 1.1em;
+}
+
+.subtitle {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap
+}
+
+button {
+    width: 150px;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+.NewRequest {
+    margin-top: 30px;
+    background-color: #2be82b;
+    color: #ffffff;
+}
+
+.Filters {
+    margin-top: 30px;
+    margin-left: 90px;
+}

@@ -10,6 +10,8 @@ import { CustomersCrudComponent } from './views/customers-crud/customers-crud.co
 import { HomeComponent } from "./views/home/home.component";
 import { ProductCrudComponent } from "./views/product-crud/product-crud.component";
 import { RequestsCrudComponent } from './views/requests-crud/requests-crud.component';
+import { RequestsCreateComponent } from './components/request/requests-create/requests-create.component';
+import { RequestsReadComponent } from './components/request/requests-read/requests-read.component';
 import { SettingsComponent } from './views/settings/settings.component';
 import { ProductCreateComponent } from './components/product/product-create/product-create.component';
 
@@ -49,6 +51,10 @@ const routes: Routes = [
   {
     path: "requests",
     component: RequestsCrudComponent
+  },
+  {
+    path: "requests/create",
+    component: RequestsCreateComponent
   },
   {
     path: "settings",

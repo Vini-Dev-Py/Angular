@@ -44,11 +44,14 @@ import { CustomersReadComponent } from './components/customers/customers-read/cu
 import { ProductRead2Component } from './components/product/product-read2/product-read2.component';
 
 import { CustomersFullInfosComponent } from './components/customers-full-infos/customers-full-infos.component';
+import { RequestsComponent } from './components/request/requests/requests.component';
 
 // import { HttpService } from '../shared/http.service';
 
 registerLocaleData(localePt);
 import { from } from 'rxjs';
+import { RequestsReadComponent } from './components/request/requests-read/requests-read.component';
+import { RequestsCreateComponent } from './components/request/requests-create/requests-create.component';
 
 @NgModule({
   declarations: [
@@ -71,6 +74,9 @@ import { from } from 'rxjs';
     CustomersReadComponent,
     ProductRead2Component,
     CustomersFullInfosComponent,
+    RequestsComponent,
+    RequestsReadComponent,
+    RequestsCreateComponent,
   ],
   imports: [
     BrowserModule,
