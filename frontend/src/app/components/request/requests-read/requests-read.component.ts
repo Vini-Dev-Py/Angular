@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { RequestService } from './../request.service';
+import { Requests } from './../request.model';
 
 @Component({
   selector: 'app-requests-read',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RequestsReadComponent implements OnInit {
 
-  constructor() { }
+  
+  requests: Requests[]
+  displayedColumns = ['name']
+
+  constructor(private requestService: RequestService) { }
 
   ngOnInit(): void {
+    this.requestService.readRequests().subscribe(requests => {
+      this.requests = requests
+      console.log(requests)
+    })
   }
+
 
 }

@@ -1,1 +1,14 @@
-<p>requests-read works!</p>
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="requests">
+
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef>name</th>
+      <td class="NameRequest" mat-cell *matCellDef="let row">
+        {{row.nameCustomersRequest}}
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>
