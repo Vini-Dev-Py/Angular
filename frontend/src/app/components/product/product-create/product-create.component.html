@@ -21,7 +21,7 @@
         </mat-form-field>
     </form>
     <form  [formGroup]="form" (ngSubmit)="onSubmit()">
-        <input type="file" id="inputFiles" (change)="onChange($event)" placeholder="Imagem Do Produto" formcontrolname="imagem">
+        <input type="file" multiple="multiple" id="inputFiles" (change)="onChange($event)" placeholder="Imagem Do Produto" formcontrolname="imagem">
         
         <button mat-raised-button type="submit" color="primary">
             Salvar
