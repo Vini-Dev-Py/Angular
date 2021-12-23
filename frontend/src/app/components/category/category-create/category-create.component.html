@@ -1,0 +1,26 @@
+<mat-card>
+    <mat-card-title>
+        Nova Categoria
+    </mat-card-title>
+    <form action="">
+        <mat-form-field appearance="outline">
+            <mat-label>Nome da categoria</mat-label>
+            <input [ngModelOptions]="{standalone: true}" name="name" placeholder="Nome" 
+                [(ngModel)]="category.name" matInput>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Descrição</mat-label>
+            <textarea [ngModelOptions]="{standalone: true}" name="description" placeholder="Descrição"
+            [(ngModel)]="category.description" matInput>
+        </textarea>
+        </mat-form-field>
+    </form>
+</mat-card>
+
+<button mat-raised-button (click)="onSubmit()" color="primary">
+    Salvar
+</button>
+
+<button mat-raised-button (click)="cancel()">
+    Cancelar
+</button>

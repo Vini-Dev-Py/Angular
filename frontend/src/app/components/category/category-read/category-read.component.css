@@ -1,0 +1,11 @@
+table {
+    width: 100%;
+}
+
+.id {
+    padding-right: 25px;
+}
+
+.name {
+    width: 200px;
+}

@@ -3,31 +3,40 @@
         Novo Produto
     </mat-card-title>
     <form action="">
-        <mat-form-field>
-            <input matInput placeholder="Nome" 
-                [(ngModel)]="product.nameProducts" name="name">
+        <mat-form-field appearance="outline">
+            <mat-label>Nome</mat-label>
+            <input [ngModelOptions]="{standalone: true}" name="name" matInput placeholder="Nome" 
+                [(ngModel)]="product.name" name="name">
         </mat-form-field>
-        <mat-form-field>
-            <input matInput placeholder="Preço (R$)" 
+        <mat-form-field appearance="outline">
+            <mat-label>Codigo</mat-label>
+            <input [ngModelOptions]="{standalone: true}" name="code" matInput placeholder="Codigo" 
+                [(ngModel)]="product.code" name="code">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Preço</mat-label>
+            <input [ngModelOptions]="{standalone: true}" name="price" matInput placeholder="Preço" 
                 [(ngModel)]="product.price" name="price">
         </mat-form-field>
-        <mat-form-field>
-            <input matInput placeholder="Quantidade De Produtos"
-                [(ngModel)]="product.quantity" name="quantity">
-        </mat-form-field>
-        <mat-form-field>
-            <input matInput placeholder="SKU"
-                [(ngModel)]="product.SKU" name="SKU">
+        <mat-slide-toggle [ngModelOptions]="{standalone: true}" [color]="colorChecked" [(ngModel)]="checked" (change)="featured()">Produto em destaque</mat-slide-toggle>
+        <br>
+        <mat-form-field appearance="outline">
+            <mat-label>Categoria</mat-label>
+            <mat-select [(value)]="selected">
+              <mat-option (click)="getCategory()" *ngFor="let category of categorysSelect" [value]="category.value">
+                {{category.viewValue}}
+              </mat-option>
+            </mat-select>
         </mat-form-field>
     </form>
-    <form  [formGroup]="form" (ngSubmit)="onSubmit()">
+    <form  [formGroup]="form">
         <input type="file" multiple="multiple" id="inputFiles" (change)="onChange($event)" placeholder="Imagem Do Produto" formcontrolname="imagem">
         
-        <button mat-raised-button type="submit" color="primary">
+        <button mat-raised-button (click)="onSubmit()" type="submit" color="primary" class="botoes">
             Salvar
         </button>
 
-        <button mat-raised-button (click)="cancel()">
+        <button mat-raised-button (click)="cancel()" class="botoes">
             Cancelar
         </button>
     </form>

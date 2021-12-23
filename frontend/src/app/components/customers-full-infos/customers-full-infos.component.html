@@ -1,7 +1,7 @@
-<div class="mat-elevation-z8 fundoInfos">
+<div *ngIf="customers" class="mat-elevation-z8 fundoInfos">
     <h1>
         <span>
-            Cliente: {{ customers.nameCustomers }}
+            Cliente: {{ customers.firstName }}
         </span>
         <span>
             Id: {{ customers.id }}
@@ -9,16 +9,16 @@
     </h1>
     <div class="infos">
         <span>
-            CPF: {{ customers.CPF }}
+            CPF: {{ customers.cpf }}
         </span>
         <span>
-            Email: {{ customers.Email }}
+            Email: {{ customers.email }}
         </span>
         <span>
-            Phone: {{ customers.Phone }}
+            Phone: {{ customers.phone }}
         </span>
         <span>
-            Endereço: {{ customers.End }}
+            Endereço: {{ customers.address }}
         </span>
     </div>
 </div>

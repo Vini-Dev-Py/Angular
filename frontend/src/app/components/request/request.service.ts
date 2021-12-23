@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class RequestService {
 
-  RequestsUrl = "http://127.0.0.1:8000/requests/requests/"
+  RequestsUrl = "https://localhost:5501/requests/requests/"
 
   constructor(private snackBar: MatSnackBar,
     private http: HttpClient) { }

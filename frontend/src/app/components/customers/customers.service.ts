@@ -4,13 +4,15 @@ import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
+import { Password } from 'src/app/models/password.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CustomersService {
 
-  CustomersUrl = "http://127.0.0.1:8000/customers/customers/"
+  CustomersUrl = "https://localhost:5501/api/v1/user"
+  PasswordUrl = "https://localhost:5501/api/v1/password"
 
   constructor(private snackBar: MatSnackBar,
     private http: HttpClient,
@@ -25,20 +27,26 @@ export class CustomersService {
   }
 
   createCustomer(customers: Customers): Observable<Customers> {
-    return this.http.post<Customers>(
-      this.CustomersUrl,
-      customers
-    )
+
+    const url = `${this.CustomersUrl}/signup`
+
+    return this.http.post<Customers>(url, customers)
   }
 
   readCustomers(): Observable<Customers[]> {
     return this.http.get<Customers[]>(this.CustomersUrl)
   }
   
-  readCustomersById(id: string): Observable<Customers> {
+  readCustomersByName(name: string): Observable<Customers> {
 
-    const url = `${this.CustomersUrl} ${id}/`
+    const url = `${this.CustomersUrl}/${name}`
 
-    return this.http.get<Customers>(url)
+    var response = this.http.get<Customers>(url)
+
+    return response
+  }
+
+  geraSenha(): Observable<Password> {
+    return this.http.get<Password>(this.PasswordUrl)
   }
 }

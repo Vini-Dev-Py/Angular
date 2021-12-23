@@ -1,5 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, LOCALE_ID } from '@angular/core';
+import { NgModule, LOCALE_ID, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { MatSelectModule } from '@angular/material/select';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -30,7 +33,6 @@ import { registerLocaleData } from '@angular/common';
 import { HomeComponent } from './views/home/home.component';
 import { ProductCrudComponent } from './views/product-crud/product-crud.component';
 import { CategoriesCrudComponent } from './views/categories-crud/categories-crud.component';
-import { BrandsCrudComponent } from './views/brands-crud/brands-crud.component';
 import { CustomersCrudComponent } from './views/customers-crud/customers-crud.component';
 import { RequestsCrudComponent } from './views/requests-crud/requests-crud.component';
 import { SettingsComponent } from './views/settings/settings.component';
@@ -52,6 +54,8 @@ registerLocaleData(localePt);
 import { from } from 'rxjs';
 import { RequestsReadComponent } from './components/request/requests-read/requests-read.component';
 import { RequestsCreateComponent } from './components/request/requests-create/requests-create.component';
+import { CategoryReadComponent } from './components/category/category-read/category-read.component';
+import { CategoryCreateComponent } from './components/category/category-create/category-create.component';
 
 @NgModule({
   declarations: [
@@ -62,9 +66,9 @@ import { RequestsCreateComponent } from './components/request/requests-create/re
     HomeComponent,
     ProductCrudComponent,
     CategoriesCrudComponent,
-    BrandsCrudComponent,
     CustomersCrudComponent,
     RequestsCrudComponent,
+    CategoriesCrudComponent,
     SettingsComponent,
     RedDirective,
     ForDirective,
@@ -77,6 +81,8 @@ import { RequestsCreateComponent } from './components/request/requests-create/re
     RequestsComponent,
     RequestsReadComponent,
     RequestsCreateComponent,
+    CategoryReadComponent,
+    CategoryCreateComponent
   ],
   imports: [
     BrowserModule,
@@ -97,7 +103,11 @@ import { RequestsCreateComponent } from './components/request/requests-create/re
     BrowserModule, 
     FormsModule,
     ReactiveFormsModule,
+    MatSelectModule,
+    MatSlideToggleModule,
+    FontAwesomeModule
   ],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   providers: [{
     provide: LOCALE_ID,
     useValue: 'pt-BR'

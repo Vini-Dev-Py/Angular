@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class ProductService {
 
-  ProductsUrl = "http://127.0.0.1:8000/products/product-itens/"
+  ProductsUrl = "https://localhost:5501/api/v1/product"
 
   constructor(private snackBar: MatSnackBar,
     private http: HttpClient) {  }
@@ -32,11 +32,4 @@ export class ProductService {
   readProducts(): Observable<Product[]> {
     return this.http.get<Product[]>(this.ProductsUrl)
   }
-
-  DJANGO_SERVER: string = "http://127.0.0.1:8000";
-
-  public upload(formData) {
-    return this.http.post<any>(`${this.DJANGO_SERVER}/upload/`, formData);
-  }
-
 }

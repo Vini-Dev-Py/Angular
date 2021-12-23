@@ -3,7 +3,7 @@ import { CustomersService } from './../customers.service';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { state } from '@angular/animations';
+import { BrowserModule } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-customers-read',
@@ -26,11 +26,10 @@ export class CustomersReadComponent implements OnInit {
     })
   }
 
-  infosFull(id: string): void {
+  infosFull(name: string): void {
 
-    this.router.navigate([`/customers/infosfull/${id}/`])
+    this.router.navigate([`/customers/infosfull/${name}/`])
 
-    // console.log(id, name, CPF, Email, Phone, End)
   }
 
 }

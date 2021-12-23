@@ -1,0 +1,17 @@
+<div class="mat-elevation-z8">
+    <table mat-table [dataSource]="categorys">
+  
+        <ng-container matColumnDef="Identificador">
+            <th mat-header-cell *matHeaderCellDef>Identificador</th>
+            <td class="id" mat-cell *matCellDef="let row">{{row.id}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="Categoria">
+            <th mat-header-cell *matHeaderCellDef>Categoria</th>
+            <td class="id" mat-cell *matCellDef="let row">{{row.name}}</td>
+        </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+</div>

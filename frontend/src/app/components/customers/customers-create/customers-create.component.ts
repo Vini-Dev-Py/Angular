@@ -2,6 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { CustomersService } from './../customers.service';
 import { Customers } from './../customers.model';
 import { Route, Router } from '@angular/router';
+import { faEyeSlash, faEye } from '@fortawesome/free-solid-svg-icons';
+
+interface Role {
+  value: string;
+  viewValue: string;
+}
 
 @Component({
   selector: 'app-customers-create',
@@ -11,18 +17,41 @@ import { Route, Router } from '@angular/router';
 export class CustomersCreateComponent implements OnInit {
 
   customers: Customers = {
-    nameCustomers: '',
-    CPF: null,
-    Email: '',
-    Phone: null,
-    End: ''
+    firstName: "",
+    lastName: "",
+    email: "",
+    password: "",
+    role: "",
+    address: "",
+    cpf: "",
+    phone: "",
   }
+
+  faEye = faEye
+  faEyeSlash = faEyeSlash
+  tipo = "password"
+  eye = faEyeSlash
+
+  roles: Role[] = [
+    {value: 'Client', viewValue: 'Cliente'},
+    {value: 'Admin', viewValue: 'Administrador'},
+    {value: 'Founder', viewValue: 'Fundador'}
+  ]
 
   constructor(private CustomersService: CustomersService,
     private router: Router) { }
 
   ngOnInit(): void {
     
+  }
+
+  geraSenha(): void {
+    this.customers.password = "";
+  }
+
+  PasswordToText(): void {
+    this.tipo = this.tipo === "password" ? "text" : "password"
+    this.eye = this.eye === faEyeSlash ? faEye : faEyeSlash
   }
 
   createCustomer(): void {

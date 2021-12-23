@@ -11,9 +11,13 @@ export class RequestsReadComponent implements OnInit {
 
   
   requests: Requests[]
-  displayedColumns = ['name']
+  displayedColumns = ['Pedido', 'Nome', 'email', 'CPF', 'CEP', 'Endereço', 'date', 'status', 'action']
 
   constructor(private requestService: RequestService) { }
+
+   editRequest(): void {
+     
+   }
 
   ngOnInit(): void {
     this.requestService.readRequests().subscribe(requests => {
@@ -24,3 +28,19 @@ export class RequestsReadComponent implements OnInit {
 
 
 }
+
+// {
+//   "nameCustomersRequest": "",
+//   "email": "",
+//   "phone": "",
+//   "CPF": "",
+//   "date": "",
+//   "price": null,
+//   "numberRequest": "",
+//   "CEP": "",
+//   "endCustomersResquest": "",
+//   "resquestItens": "",
+//   "quantityItens": null,
+//   "status": "",
+//   "shippingMethod": ""
+// }

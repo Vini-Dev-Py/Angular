@@ -1,10 +1,70 @@
 <div class="mat-elevation-z8">
   <table mat-table [dataSource]="requests">
 
-    <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef>name</th>
+    <ng-container matColumnDef="Pedido">
+      <th mat-header-cell *matHeaderCellDef>Pedido</th>
+      <td class="numberRequest" mat-cell *matCellDef="let row">
+        {{row.numberRequest}}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Nome">
+      <th mat-header-cell *matHeaderCellDef>Nome</th>
       <td class="NameRequest" mat-cell *matCellDef="let row">
         {{row.nameCustomersRequest}}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="email">
+      <th mat-header-cell *matHeaderCellDef>Email</th>
+      <td class="email" mat-cell *matCellDef="let row">
+        {{row.email}}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="CPF">
+      <th mat-header-cell *matHeaderCellDef>CPF</th>
+      <td class="CPF" mat-cell *matCellDef="let row">
+        {{row.CPF}}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="CEP">
+      <th mat-header-cell *matHeaderCellDef>CEP</th>
+      <td class="status" mat-cell *matCellDef="let row">
+        {{row.CEP}}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Endereço">
+      <th mat-header-cell *matHeaderCellDef>Endereço</th>
+      <td class="status" mat-cell *matCellDef="let row">
+        {{row.endCustomersResquest}}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="date">
+      <th mat-header-cell *matHeaderCellDef>Data</th>
+      <td class="date" mat-cell *matCellDef="let row">
+        {{row.date}}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="status">
+      <th mat-header-cell *matHeaderCellDef>status</th>
+      <td class="status" mat-cell *matCellDef="let row">
+        {{row.status}}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="action">
+      <th mat-header-cell *matHeaderCellDef></th>
+      <td class="status" mat-cell *matCellDef="let row">
+        <button (click)="editRequest()" mat-raised-button color="primary">
+          <i class="material-icons arrow">
+            create
+          </i>
+        </button>
       </td>
     </ng-container>
 

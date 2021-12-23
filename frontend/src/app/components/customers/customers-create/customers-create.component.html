@@ -3,26 +3,58 @@
         Novo Cliente
     </mat-card-title>
     <form action="">
-        <mat-form-field>
-            <input matInput placeholder="Nome" 
-                [(ngModel)]="customers.nameCustomers" name="name">
-        </mat-form-field>
-        <mat-form-field>
-            <input matInput placeholder="CPF" 
-                [(ngModel)]="customers.CPF" name="CPF">
-        </mat-form-field>
-        <mat-form-field>
-            <input matInput placeholder="Email" 
-                [(ngModel)]="customers.Email" name="Email">
-        </mat-form-field>
-        <mat-form-field>
-            <input matInput placeholder="Telefone" 
-                [(ngModel)]="customers.Phone" name="Phone">
-        </mat-form-field>
-        <mat-form-field>
-            <input matInput placeholder="Endereço" 
-                [(ngModel)]="customers.End" name="Endereço">
-        </mat-form-field>
+        <div class="inputs">
+            <mat-form-field class="field" appearance="outline">
+                <mat-label>Primeiro nome</mat-label>
+                <input [ngModelOptions]="{standalone: true}" name="firstName" matInput placeholder="Primeiro nome" [(ngModel)]="customers.firstName">
+            </mat-form-field>
+            <mat-form-field class="field" appearance="outline">
+                <mat-label>Ultimo nome</mat-label>
+                <input [ngModelOptions]="{standalone: true}" name="lastName" matInput placeholder="Ultimo nome" [(ngModel)]="customers.lastName">
+            </mat-form-field>
+        </div>
+        <div class="inputs">
+            <mat-form-field class="field" appearance="outline">
+                <mat-label>Email</mat-label>
+                <input [ngModelOptions]="{standalone: true}" name="email" matInput placeholder="Email" [(ngModel)]="customers.email">
+            </mat-form-field>
+            <div password="password">
+                <mat-form-field class="field" appearance="outline">
+                    <mat-label>Senha</mat-label>
+                    <input type="{{tipo}}" [ngModelOptions]="{standalone: true}" name="senha" matInput placeholder="Senha" [(ngModel)]="customers.password">
+                </mat-form-field>
+                <button class="buttonEye" (click)="PasswordToText()">
+                    <fa-icon [icon]="eye"></fa-icon>
+                </button>
+            </div>
+        </div>
+        <div class="inputs">
+            <mat-form-field class="field" appearance="outline">
+                <mat-label>Função</mat-label>
+                <mat-select>
+                    <mat-option *ngFor="let role of roles" [value]="role.value">
+                    {{role.viewValue}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field class="field" appearance="outline">
+                <mat-label>Endereço</mat-label>
+                <input [ngModelOptions]="{standalone: true}" name="address" matInput placeholder="Endereço" [(ngModel)]="customers.address">
+            </mat-form-field>
+        </div>
+        <div class="inputs">
+            <mat-form-field class="field" appearance="outline">
+                <mat-label>CPF</mat-label>
+                <input [ngModelOptions]="{standalone: true}" name="cpf" matInput placeholder="CPF" [(ngModel)]="customers.cpf">
+            </mat-form-field>
+            <mat-form-field class="field" appearance="outline">
+                <mat-label>Telefone</mat-label>
+                <input [ngModelOptions]="{standalone: true}" name="phone" matInput placeholder="Telefone" [(ngModel)]="customers.phone">
+            </mat-form-field>
+        </div>
+        <button class="botoes" mat-raised-button (click)="geraSenha()" color="primary">
+            Gerar uma senha
+        </button>
     </form>
 </mat-card>
 

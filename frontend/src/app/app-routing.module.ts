@@ -3,7 +3,6 @@ import { CustomersFullInfosComponent } from './components/customers-full-infos/c
 import { CustomersCreateComponent } from './components/customers/customers-create/customers-create.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { BrandsCrudComponent } from './views/brands-crud/brands-crud.component';
 import { CategoriesCrudComponent } from './views/categories-crud/categories-crud.component';
 import { CustomersCrudComponent } from './views/customers-crud/customers-crud.component';
 
@@ -14,6 +13,7 @@ import { RequestsCreateComponent } from './components/request/requests-create/re
 import { RequestsReadComponent } from './components/request/requests-read/requests-read.component';
 import { SettingsComponent } from './views/settings/settings.component';
 import { ProductCreateComponent } from './components/product/product-create/product-create.component';
+import { CategoryCreateComponent } from './components/category/category-create/category-create.component';
 
 const routes: Routes = [
   {
@@ -33,8 +33,8 @@ const routes: Routes = [
     component: CategoriesCrudComponent
   },
   {
-    path: "brands",
-    component: BrandsCrudComponent
+    path: "categories/create",
+    component: CategoryCreateComponent
   },
   {
     path: "customers",
@@ -45,7 +45,7 @@ const routes: Routes = [
     component: CustomersCreateComponent
   },
   {
-    path: "customers/infosfull/:id",
+    path: "customers/infosfull/:name",
     component: CustomersFullInfosComponent
   },
   {

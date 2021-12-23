@@ -1,8 +1,11 @@
 export interface Customers {
     id?: number
-    nameCustomers: string
-    CPF: number
-    Email: string
-    Phone: number
-    End: string
+    password: string
+    firstName: string
+    lastName: string
+    email: string
+    role: string
+    address: string
+    cpf: string
+    phone: string
 }
