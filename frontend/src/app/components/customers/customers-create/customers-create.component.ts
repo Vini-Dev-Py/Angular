@@ -49,6 +49,18 @@ export class CustomersCreateComponent implements OnInit {
     this.customers.password = "";
   }
 
+  MyInputCPF(): void {
+    if (this.customers.cpf.length == 3) {
+      this.customers.cpf = `${this.customers.cpf}.`
+    }
+    if (this.customers.cpf.length == 7) {
+      this.customers.cpf = `${this.customers.cpf}.`
+    }
+    if (this.customers.cpf.length == 11) {
+      this.customers.cpf = `${this.customers.cpf}-`
+    }
+  }
+
   PasswordToText(): void {
     this.tipo = this.tipo === "password" ? "text" : "password"
     this.eye = this.eye === faEyeSlash ? faEye : faEyeSlash

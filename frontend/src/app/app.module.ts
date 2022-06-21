@@ -26,6 +26,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 
 import localePt from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
@@ -56,6 +58,7 @@ import { RequestsReadComponent } from './components/request/requests-read/reques
 import { RequestsCreateComponent } from './components/request/requests-create/requests-create.component';
 import { CategoryReadComponent } from './components/category/category-read/category-read.component';
 import { CategoryCreateComponent } from './components/category/category-create/category-create.component';
+import { RequestFilterComponent } from './components/request/request-filter/request-filter.component';
 
 @NgModule({
   declarations: [
@@ -82,7 +85,8 @@ import { CategoryCreateComponent } from './components/category/category-create/c
     RequestsReadComponent,
     RequestsCreateComponent,
     CategoryReadComponent,
-    CategoryCreateComponent
+    CategoryCreateComponent,
+    RequestFilterComponent
   ],
   imports: [
     BrowserModule,
@@ -105,7 +109,13 @@ import { CategoryCreateComponent } from './components/category/category-create/c
     ReactiveFormsModule,
     MatSelectModule,
     MatSlideToggleModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    MatDatepickerModule,
+    MatNativeDateModule 
+  ],
+  exports: [
+    MatDatepickerModule, 
+    MatNativeDateModule 
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   providers: [{

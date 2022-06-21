@@ -14,6 +14,7 @@ import { RequestsReadComponent } from './components/request/requests-read/reques
 import { SettingsComponent } from './views/settings/settings.component';
 import { ProductCreateComponent } from './components/product/product-create/product-create.component';
 import { CategoryCreateComponent } from './components/category/category-create/category-create.component';
+import { RequestFilterComponent } from './components/request/request-filter/request-filter.component';
 
 const routes: Routes = [
   {
@@ -51,6 +52,10 @@ const routes: Routes = [
   {
     path: "requests",
     component: RequestsCrudComponent
+  },
+  {
+    path: "requests/filter",
+    component: RequestFilterComponent
   },
   {
     path: "requests/create",

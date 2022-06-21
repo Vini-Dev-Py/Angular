@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class RequestService {
 
-  RequestsUrl = "https://localhost:5501/requests/requests/"
+  RequestsUrl = "https://localhost:5501/api/v1/order"
 
   constructor(private snackBar: MatSnackBar,
     private http: HttpClient) { }
@@ -22,7 +22,7 @@ export class RequestService {
       })
     }
 
-    creteRequests(request: Requests): Observable<Requests> {
+    createRequest(request: Requests): Observable<Requests> {
       return this.http.post<Requests>(
         this.RequestsUrl,
         request

@@ -1,0 +1,42 @@
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    margin-right: 15px;
+    margin-top: 20px;
+}
+
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+    
+}
+input[type=number] { 
+   -moz-appearance: textfield;
+   appearance: textfield;
+
+}
+
+.flex {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    width: 1000px;
+}
+
+.buttonCPF {
+    border: none;
+    background-color: white;
+}
+
+.field {
+    margin-right: 20px;
+    width: 240px;
+}
+
+.icon-calendar {
+    display: flex;
+    align-items: center;
+}

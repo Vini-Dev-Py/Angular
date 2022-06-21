@@ -1,71 +1,49 @@
-<div class="mat-elevation-z8">
+<div *ngIf="requests" class="mat-elevation-z8">
   <table mat-table [dataSource]="requests">
 
-    <ng-container matColumnDef="Pedido">
-      <th mat-header-cell *matHeaderCellDef>Pedido</th>
-      <td class="numberRequest" mat-cell *matCellDef="let row">
-        {{row.numberRequest}}
-      </td>
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef>Identificador</th>
+      <td mat-cell *matCellDef="let row"> {{row.id}} </td>
     </ng-container>
 
-    <ng-container matColumnDef="Nome">
+    <ng-container matColumnDef="name">
       <th mat-header-cell *matHeaderCellDef>Nome</th>
-      <td class="NameRequest" mat-cell *matCellDef="let row">
-        {{row.nameCustomersRequest}}
-      </td>
+      <td mat-cell *matCellDef="let row"> {{row.name}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="phone">
+      <th mat-header-cell *matHeaderCellDef>Telefone</th>
+      <td mat-cell *matCellDef="let row"> {{row.phone}} </td>
     </ng-container>
 
     <ng-container matColumnDef="email">
       <th mat-header-cell *matHeaderCellDef>Email</th>
-      <td class="email" mat-cell *matCellDef="let row">
-        {{row.email}}
-      </td>
+      <td mat-cell *matCellDef="let row"> {{row.email}} </td>
     </ng-container>
 
-    <ng-container matColumnDef="CPF">
-      <th mat-header-cell *matHeaderCellDef>CPF</th>
-      <td class="CPF" mat-cell *matCellDef="let row">
-        {{row.CPF}}
-      </td>
+    <ng-container matColumnDef="value">
+      <th mat-header-cell *matHeaderCellDef>Valor</th>
+      <td mat-cell *matCellDef="let row"> {{row.value}} </td>
     </ng-container>
 
-    <ng-container matColumnDef="CEP">
+    <ng-container matColumnDef="quantity">
+      <th mat-header-cell *matHeaderCellDef>Quantidade de itens</th>
+      <td mat-cell *matCellDef="let row"> {{row.quantity}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="cep">
       <th mat-header-cell *matHeaderCellDef>CEP</th>
-      <td class="status" mat-cell *matCellDef="let row">
-        {{row.CEP}}
-      </td>
-    </ng-container>
-
-    <ng-container matColumnDef="Endereço">
-      <th mat-header-cell *matHeaderCellDef>Endereço</th>
-      <td class="status" mat-cell *matCellDef="let row">
-        {{row.endCustomersResquest}}
-      </td>
-    </ng-container>
-
-    <ng-container matColumnDef="date">
-      <th mat-header-cell *matHeaderCellDef>Data</th>
-      <td class="date" mat-cell *matCellDef="let row">
-        {{row.date}}
-      </td>
+      <td mat-cell *matCellDef="let row"> {{row.cep}} </td>
     </ng-container>
 
     <ng-container matColumnDef="status">
-      <th mat-header-cell *matHeaderCellDef>status</th>
-      <td class="status" mat-cell *matCellDef="let row">
-        {{row.status}}
-      </td>
+      <th mat-header-cell *matHeaderCellDef>Status</th>
+      <td mat-cell *matCellDef="let row"> {{row.status}} </td>
     </ng-container>
 
-    <ng-container matColumnDef="action">
-      <th mat-header-cell *matHeaderCellDef></th>
-      <td class="status" mat-cell *matCellDef="let row">
-        <button (click)="editRequest()" mat-raised-button color="primary">
-          <i class="material-icons arrow">
-            create
-          </i>
-        </button>
-      </td>
+    <ng-container matColumnDef="deliverymode">
+      <th mat-header-cell *matHeaderCellDef>Tipo de envio</th>
+      <td mat-cell *matCellDef="let row"> {{row.deliveryMode}} </td>
     </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

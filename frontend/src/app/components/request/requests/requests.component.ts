@@ -17,4 +17,8 @@ export class RequestsComponent implements OnInit {
     this.router.navigate(['/requests/create'])
   }
 
+  navgateToRequestsFilter(): void {
+    this.router.navigate(['/requests/filter'])
+  }
+
 }

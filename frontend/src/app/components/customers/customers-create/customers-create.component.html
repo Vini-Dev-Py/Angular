@@ -45,7 +45,7 @@
         <div class="inputs">
             <mat-form-field class="field" appearance="outline">
                 <mat-label>CPF</mat-label>
-                <input [ngModelOptions]="{standalone: true}" name="cpf" matInput placeholder="CPF" [(ngModel)]="customers.cpf">
+                <input [ngModelOptions]="{standalone: true}" (input)="MyInputCPF()" maxlength="14" name="cpf" matInput placeholder="CPF" [(ngModel)]="customers.cpf">
             </mat-form-field>
             <mat-form-field class="field" appearance="outline">
                 <mat-label>Telefone</mat-label>
