@@ -5,7 +5,7 @@ import { Requests } from './../request.model';
 @Component({
   selector: 'app-requests-read',
   templateUrl: './requests-read.component.html',
-  styleUrls: ['./requests-read.component.css']
+  styleUrls: ['./requests-read.component.scss']
 })
 export class RequestsReadComponent implements OnInit {
   

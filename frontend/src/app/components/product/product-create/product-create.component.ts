@@ -16,7 +16,7 @@ interface CategoryInterface {
 @Component({
   selector: 'app-product-create',
   templateUrl: './product-create.component.html',
-  styleUrls: ['./product-create.component.css']
+  styleUrls: ['./product-create.component.scss']
 })
 export class ProductCreateComponent implements OnInit {
 

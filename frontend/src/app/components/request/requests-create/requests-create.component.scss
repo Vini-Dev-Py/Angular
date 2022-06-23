@@ -1,6 +1,6 @@
 form {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 button {
@@ -23,7 +23,7 @@ input[type=number] {
     align-items: flex-start;
     justify-content: flex-start;
 
-    width: 1000px;
+    width: 800px;
 }
 
 .buttonCPF {

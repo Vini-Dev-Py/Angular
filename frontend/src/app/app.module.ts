@@ -59,6 +59,7 @@ import { RequestsCreateComponent } from './components/request/requests-create/re
 import { CategoryReadComponent } from './components/category/category-read/category-read.component';
 import { CategoryCreateComponent } from './components/category/category-create/category-create.component';
 import { RequestFilterComponent } from './components/request/request-filter/request-filter.component';
+import { ProductListComponent } from './components/product/product-list/product-list.component';
 
 @NgModule({
   declarations: [
@@ -86,7 +87,8 @@ import { RequestFilterComponent } from './components/request/request-filter/requ
     RequestsCreateComponent,
     CategoryReadComponent,
     CategoryCreateComponent,
-    RequestFilterComponent
+    RequestFilterComponent,
+    ProductListComponent
   ],
   imports: [
     BrowserModule,

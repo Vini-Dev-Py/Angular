@@ -8,7 +8,7 @@ import { ProductRead2DataSource } from './product-read2-datasource';
 @Component({
   selector: 'app-product-read2',
   templateUrl: './product-read2.component.html',
-  styleUrls: ['./product-read2.component.css']
+  styleUrls: ['./product-read2.component.scss']
 })
 export class ProductRead2Component implements AfterViewInit, OnInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;

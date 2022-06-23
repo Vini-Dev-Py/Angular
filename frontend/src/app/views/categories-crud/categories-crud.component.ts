@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-categories-crud',
   templateUrl: './categories-crud.component.html',
-  styleUrls: ['./categories-crud.component.css']
+  styleUrls: ['./categories-crud.component.scss']
 })
 export class CategoriesCrudComponent implements OnInit {
 

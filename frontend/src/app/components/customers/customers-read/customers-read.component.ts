@@ -8,7 +8,7 @@ import { BrowserModule } from '@angular/platform-browser';
 @Component({
   selector: 'app-customers-read',
   templateUrl: './customers-read.component.html',
-  styleUrls: ['./customers-read.component.css']
+  styleUrls: ['./customers-read.component.scss']
 })
 export class CustomersReadComponent implements OnInit {
 

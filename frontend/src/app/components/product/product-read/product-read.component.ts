@@ -6,7 +6,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 @Component({
   selector: 'app-product-read',
   templateUrl: './product-read.component.html',
-  styleUrls: ['./product-read.component.css']
+  styleUrls: ['./product-read.component.scss']
 })
 export class ProductReadComponent implements OnInit {
 

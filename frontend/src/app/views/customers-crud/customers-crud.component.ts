@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-customers-crud',
   templateUrl: './customers-crud.component.html',
-  styleUrls: ['./customers-crud.component.css']
+  styleUrls: ['./customers-crud.component.scss']
 })
 export class CustomersCrudComponent implements OnInit {
 

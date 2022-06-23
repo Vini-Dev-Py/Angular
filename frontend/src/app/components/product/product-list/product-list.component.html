@@ -1,0 +1,13 @@
+<mat-card>
+    <div class="produto">
+        <div class="nomeProduto">
+            <span>Cadeira</span>
+        </div>
+        <div class="botões">
+            <input [ngModelOptions]="{standalone: true}" name="quantity" id="input" placeholder="Quantidade" 
+                [(ngModel)]="value" type="number" min="0" max="10" matInput>
+            <button (click)="Menos(value)">-</button>
+            <button (click)="Soma(value)">+</button>
+        </div>
+    </div>
+</mat-card>

@@ -12,7 +12,7 @@ interface Role {
 @Component({
   selector: 'app-customers-create',
   templateUrl: './customers-create.component.html',
-  styleUrls: ['./customers-create.component.css']
+  styleUrls: ['./customers-create.component.scss']
 })
 export class CustomersCreateComponent implements OnInit {
 

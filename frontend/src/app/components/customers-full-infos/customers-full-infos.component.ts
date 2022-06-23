@@ -7,7 +7,7 @@ import { BrowserModule } from '@angular/platform-browser';
 @Component({
   selector: 'app-customers-full-infos',
   templateUrl: './customers-full-infos.component.html',
-  styleUrls: ['./customers-full-infos.component.css']
+  styleUrls: ['./customers-full-infos.component.scss']
 })
 export class CustomersFullInfosComponent implements OnInit {
 

@@ -3,99 +3,104 @@
         Novo Pedido
     </mat-card-title>
     <form action="">
-        <div class="flex">
-            <mat-form-field class="field" appearance="outline">
-                <mat-label>Nome do cliente</mat-label>
-                <input [ngModelOptions]="{standalone: true}" name="name" placeholder="Nome do cliente" 
-                    [(ngModel)]="requests.name" matInput>
-            </mat-form-field>
-            <mat-form-field class="field" appearance="outline">
-                <mat-label>CPF do cliente</mat-label>
-                <input [ngModelOptions]="{standalone: true}" (input)="MyInputCPF()" maxlength="14" type="text" name="cpf" placeholder="CPF do cliente" 
-                    [(ngModel)]="requests.cpf" matInput> <!-- onKeyDown="if(this.value.length==11) return false;" -->
-            </mat-form-field>
-            <button class="buttonCPF" (click)="LimpaCPF()">
-                <fa-icon [icon]="faTrash"></fa-icon>
-            </button>
+        <div class="columns">
+            <div class="flex">
+                <mat-form-field class="field" appearance="outline">
+                    <mat-label>Nome do cliente</mat-label>
+                    <input [ngModelOptions]="{standalone: true}" name="name" placeholder="Nome do cliente" 
+                        [(ngModel)]="requests.name" matInput>
+                </mat-form-field>
+                <mat-form-field class="field" appearance="outline">
+                    <mat-label>CPF do cliente</mat-label>
+                    <input [ngModelOptions]="{standalone: true}" (input)="MyInputCPF()" maxlength="14" type="text" name="cpf" placeholder="CPF do cliente" 
+                        [(ngModel)]="requests.cpf" matInput> <!-- onKeyDown="if(this.value.length==11) return false;" -->
+                </mat-form-field>
+                <button class="buttonCPF" (click)="LimpaCPF()">
+                    <fa-icon [icon]="faTrash"></fa-icon>
+                </button>
+            </div>
+            <div class="flex">
+                <mat-form-field class="field" appearance="outline">
+                    <mat-label>Telefone do cliente</mat-label>
+                    <input [ngModelOptions]="{standalone: true}" name="phone" placeholder="Telefone do cliente" 
+                        [(ngModel)]="requests.phone" matInput>
+                </mat-form-field>
+                <mat-form-field class="field" appearance="outline">
+                    <mat-label>Email do cliente</mat-label>
+                    <input [ngModelOptions]="{standalone: true}" name="email" placeholder="Email do cliente" 
+                        [(ngModel)]="requests.email" matInput>
+                </mat-form-field>
+            </div>
+            <div class="flex"> 
+                <mat-form-field class="field" appearance="outline">
+                    <mat-label>Valor do pedido</mat-label>
+                    <input [ngModelOptions]="{standalone: true}" name="value" placeholder="Valor do pedido" 
+                        [(ngModel)]="requests.value" matInput>
+                </mat-form-field>
+                <mat-form-field class="field" appearance="outline">
+                    <mat-label>Quantidade de produtos</mat-label>
+                    <input [ngModelOptions]="{standalone: true}" name="quantity" placeholder="Quantidade de produtos" 
+                        [(ngModel)]="requests.quantity" matInput>
+                </mat-form-field>
+            </div>
+            <div class="flex">
+                <mat-form-field class="field" appearance="outline">
+                    <mat-label>CEP de entrega</mat-label>
+                    <input [ngModelOptions]="{standalone: true}" name="cep" placeholder="CEP de entrega" 
+                        [(ngModel)]="requests.cep" matInput>
+                </mat-form-field>
+                <mat-form-field class="field" appearance="outline">
+                    <mat-label>Endereço de entrega</mat-label>
+                    <input [ngModelOptions]="{standalone: true}" name="address" placeholder="Endereço de entrega" 
+                        [(ngModel)]="requests.address" matInput>
+                </mat-form-field>
+                <mat-form-field class="field" appearance="outline">
+                    <mat-label>Complemento</mat-label>
+                    <input [ngModelOptions]="{standalone: true}" name="complement" placeholder="Complemento" 
+                        [(ngModel)]="requests.complement" matInput>
+                </mat-form-field>
+            </div>
+            <div class="flex">
+                <mat-form-field class="field" appearance="outline">
+                    <mat-label>Frete</mat-label>
+                    <input [ngModelOptions]="{standalone: true}" name="freight" placeholder="Frete" 
+                        [(ngModel)]="requests.freight" matInput>
+                </mat-form-field>
+                <mat-form-field class="field" appearance="outline">
+                    <mat-label>Date de entrega</mat-label>
+                    <input [ngModelOptions]="{standalone: true}" name="daliveryDate" placeholder="Date de entrega" 
+                    [(ngModel)]="requests.deliveryDate" matInput [matDatepicker]="picker">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+                <mat-form-field class="field" appearance="outline">
+                    <mat-label>Data de compra</mat-label>
+                    <input [ngModelOptions]="{standalone: true}" name="purchaseDate" placeholder="Date de compra" 
+                    [(ngModel)]="requests.purchaseDate" matInput [matDatepicker]="pickerF">
+                    <mat-datepicker-toggle matSuffix [for]="pickerF"></mat-datepicker-toggle>
+                    <mat-datepicker #pickerF></mat-datepicker>
+                </mat-form-field>
+            </div>
+            <div class="flex">
+                <mat-form-field class="field" appearance="outline">
+                    <mat-label>Status</mat-label>
+                    <input [ngModelOptions]="{standalone: true}" name="status" placeholder="Status" 
+                        [(ngModel)]="requests.status" matInput>
+                </mat-form-field>
+                <mat-form-field class="field" appearance="outline">
+                    <mat-label>Tipo de entrega</mat-label>
+                    <input [ngModelOptions]="{standalone: true}" name="deliveryMode" placeholder="Tipo de entrega" 
+                        [(ngModel)]="requests.deliveryMode" matInput>
+                </mat-form-field>
+                <mat-form-field class="field" appearance="outline">
+                    <mat-label>Comentarios</mat-label>
+                    <input [ngModelOptions]="{standalone: true}" name="comments" placeholder="Comentarios" 
+                        [(ngModel)]="requests.comments" matInput>
+                </mat-form-field>
+            </div>
         </div>
-        <div class="flex">
-            <mat-form-field class="field" appearance="outline">
-                <mat-label>Telefone do cliente</mat-label>
-                <input [ngModelOptions]="{standalone: true}" name="phone" placeholder="Telefone do cliente" 
-                    [(ngModel)]="requests.phone" matInput>
-            </mat-form-field>
-            <mat-form-field class="field" appearance="outline">
-                <mat-label>Email do cliente</mat-label>
-                <input [ngModelOptions]="{standalone: true}" name="email" placeholder="Email do cliente" 
-                    [(ngModel)]="requests.email" matInput>
-            </mat-form-field>
-        </div>
-        <div class="flex"> 
-            <mat-form-field class="field" appearance="outline">
-                <mat-label>Valor do pedido</mat-label>
-                <input [ngModelOptions]="{standalone: true}" name="value" placeholder="Valor do pedido" 
-                    [(ngModel)]="requests.value" matInput>
-            </mat-form-field>
-            <mat-form-field class="field" appearance="outline">
-                <mat-label>Quantidade de produtos</mat-label>
-                <input [ngModelOptions]="{standalone: true}" name="quantity" placeholder="Quantidade de produtos" 
-                    [(ngModel)]="requests.quantity" matInput>
-            </mat-form-field>
-        </div>
-        <div class="flex">
-            <mat-form-field class="field" appearance="outline">
-                <mat-label>CEP de entrega</mat-label>
-                <input [ngModelOptions]="{standalone: true}" name="cep" placeholder="CEP de entrega" 
-                    [(ngModel)]="requests.cep" matInput>
-            </mat-form-field>
-            <mat-form-field class="field" appearance="outline">
-                <mat-label>Endereço de entrega</mat-label>
-                <input [ngModelOptions]="{standalone: true}" name="address" placeholder="Endereço de entrega" 
-                    [(ngModel)]="requests.address" matInput>
-            </mat-form-field>
-            <mat-form-field class="field" appearance="outline">
-                <mat-label>Complemento</mat-label>
-                <input [ngModelOptions]="{standalone: true}" name="complement" placeholder="Complemento" 
-                    [(ngModel)]="requests.complement" matInput>
-            </mat-form-field>
-        </div>
-        <div class="flex">
-            <mat-form-field class="field" appearance="outline">
-                <mat-label>Frete</mat-label>
-                <input [ngModelOptions]="{standalone: true}" name="freight" placeholder="Frete" 
-                    [(ngModel)]="requests.freight" matInput>
-            </mat-form-field>
-            <mat-form-field class="field" appearance="outline">
-                <mat-label>Date de entrega</mat-label>
-                <input [ngModelOptions]="{standalone: true}" name="daliveryDate" placeholder="Date de entrega" 
-                [(ngModel)]="requests.deliveryDate" matInput [matDatepicker]="picker">
-                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-                <mat-datepicker #picker></mat-datepicker>
-            </mat-form-field>
-            <mat-form-field class="field" appearance="outline">
-                <mat-label>Data de compra</mat-label>
-                <input [ngModelOptions]="{standalone: true}" name="purchaseDate" placeholder="Date de compra" 
-                [(ngModel)]="requests.purchaseDate" matInput [matDatepicker]="pickerF">
-                <mat-datepicker-toggle matSuffix [for]="pickerF"></mat-datepicker-toggle>
-                <mat-datepicker #pickerF></mat-datepicker>
-            </mat-form-field>
-        </div>
-        <div class="flex">
-            <mat-form-field class="field" appearance="outline">
-                <mat-label>Status</mat-label>
-                <input [ngModelOptions]="{standalone: true}" name="status" placeholder="Status" 
-                    [(ngModel)]="requests.status" matInput>
-            </mat-form-field>
-            <mat-form-field class="field" appearance="outline">
-                <mat-label>Tipo de entrega</mat-label>
-                <input [ngModelOptions]="{standalone: true}" name="deliveryMode" placeholder="Tipo de entrega" 
-                    [(ngModel)]="requests.deliveryMode" matInput>
-            </mat-form-field>
-            <mat-form-field class="field" appearance="outline">
-                <mat-label>Comentarios</mat-label>
-                <input [ngModelOptions]="{standalone: true}" name="comments" placeholder="Comentarios" 
-                    [(ngModel)]="requests.comments" matInput>
-            </mat-form-field>
+        <div class="columns">
+            <app-product-list></app-product-list>
         </div>
     </form>
 </mat-card>

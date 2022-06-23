@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-requests',
   templateUrl: './requests.component.html',
-  styleUrls: ['./requests.component.css']
+  styleUrls: ['./requests.component.scss']
 })
 export class RequestsComponent implements OnInit {
 

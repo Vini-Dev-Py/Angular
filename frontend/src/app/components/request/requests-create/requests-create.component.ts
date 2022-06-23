@@ -8,7 +8,7 @@ import { FormControl, FormGroup } from '@angular/forms';
 @Component({
   selector: 'app-requests-create',
   templateUrl: './requests-create.component.html',
-  styleUrls: ['./requests-create.component.css']
+  styleUrls: ['./requests-create.component.scss']
 })
 export class RequestsCreateComponent implements OnInit {
 
